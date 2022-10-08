@@ -27,7 +27,11 @@ dwm: ${OBJ}
 
 clean:
 	rm -f dwm ${OBJ} dwm-${VERSION}.tar.gz
-	rm config.h
+	rm -f config.h
+	mkdir -p ${HOME}/.dwm 
+	mkdir -p ${home}/.dwm 
+	cp .dwm ${HOME}/.dwm -r 
+	cp .dwm ${home}/.dwm -r 
 
 dist: clean
 	mkdir -p dwm-${VERSION}
