@@ -1,5 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 
+
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
@@ -20,6 +21,7 @@ static const char *colors[][3]      = {
 	[SchemeSel]  = { col_gray4, col_darkcyan,  col_cyan  },
 };
 
+
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
@@ -33,6 +35,7 @@ static const Rule rules[] = {
 		{ "Gimp",    NULL,     NULL,           0,         1,          0,           0,        -1 },
 		{ "Firefox", NULL,     NULL,		1 << 8,    0,          0,          -1,        -1 },
 		{ "st",      NULL,     NULL,		0,         0,          1,           0,        -1 },
+		{ "tmux",      NULL,     NULL,		0,         0,          1,           0,        -1 },
 		{ NULL,      NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 };
 
@@ -63,6 +66,11 @@ static const Layout layouts[] = {
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
+static const char *browser[]  = {"qutebrowser", NULL };
+static const char *tmuxcmd[]  = { "st", "-e", "tmux", NULL };
+static const char *sleep5[]   = {"sleep", "5s", NULL};
+/* spawnprograms */
+static const char **startup_programs[] = {browser, sleep5, tmuxcmd, };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
