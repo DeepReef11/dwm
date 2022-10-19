@@ -1,9 +1,14 @@
 # Setup
 
 Install slstatus then:
+
 > mkdir ~/.dwm
 > touch ~/.dwm/autostart.sh ~/.dwm/autostart_blocking.sh
+> chmod +x ~/.dwm/autostart.sh ~/.dwm/autostart_blocking.sh
 
+Add the following to autostart_blockng.sh:
+
+> slstatus &
 
 
 
