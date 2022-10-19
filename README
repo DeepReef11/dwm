@@ -1,3 +1,13 @@
+# Setup
+
+Install slstatus then:
+> mkdir ~/.dwm
+> touch ~/.dwm/autostart.sh ~/.dwm/autostart_blocking.sh
+
+
+
+
+
 dwm - dynamic window manager
 ============================
 dwm is an extremely fast, small, and dynamic window manager for X.
