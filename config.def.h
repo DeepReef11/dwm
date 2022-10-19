@@ -68,8 +68,9 @@ static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray
 static const char *termcmd[]  = { "st", NULL };
 static const char *browser[]  = {"qutebrowser", NULL };
 static const char *tmuxcmd[]  = { "st", "-e", "tmux", NULL };
+
 /* spawnprograms */
-static const char **startup_programs[] = {browser, tmuxcmd, };
+static const char **startup_programs[] = {browser, tmuxcmd,  };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
