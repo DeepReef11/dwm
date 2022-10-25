@@ -1,3 +1,8 @@
+# Fix
+
+Config doesn't work (Brightnessctl). Try:  
+> sudo make uninstall && sudo make install
+
 # Setup
 
 Install slstatus then:

@@ -1,5 +1,5 @@
 /* See LICENSE file for copyright and license details. */
-
+#include <X11/XF86keysym.h>
 
 /* appearance */
 static const unsigned int borderpx  = 4;        /* border pixel of windows */
@@ -71,6 +71,9 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *browser[]  = {"qutebrowser", NULL };
 static const char *tmuxcmd[]  = { "st", "-e", "tmux", NULL };
 
+// Brightness and volume Commands.
+// Use keybinding manage (sxhkd)
+
 /* spawnprograms */
 static const char **startup_programs[] = {browser, tmuxcmd,  };
 
@@ -114,6 +117,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+
 };
 
 /* button definitions */
